@@ -195,7 +195,7 @@ RadeonMaster is a Python module for retrieving utilization and other information
      ```python
      import RadeonMaster
      gpu = RadeonMaster.GPU()
-     for data in gpu.continuos('0100'):
+     for data in gpu.continuos_output('0100'):
        print(data)
      ```
      **output**:
@@ -210,13 +210,13 @@ RadeonMaster is a Python module for retrieving utilization and other information
       {'bus address': '01:00.0', 'GPU type': 'Dedicated gpu', 'GPU name': 'Advanced Micro Devices, Inc. [AMD/ATI] Oland [Radeon HD 8570 / R5 430 OEM / R7 240/340 / Radeon 520 OEM] (rev 87)', 'GPU temp': 43.0, 'bus': '01,', 'GPU usage': '0.83%,', 'Event Engine': '0.00%,', 'Vertex Grouper + Tesselator': '0.00%,', 'Texture Addresser': '0.83%,', 'Sequencer Instruction Cache': '0.00%,', 'Shader Interpolator': '0.83%,', 'scan converter': '0.83%,', 'Primitive Assembly': '0.00%,', 'depth block': '0.83%,', 'color block': '0.83%,', 'VRAM PERCENTAGE': '13.42%', 'VRAM Used': '274.86mb,', 'VRAM Total': '2048.14mb', 'VRAM': '274.86mb, / 2048.14mb percentage : 13.42%', 'GTT PERCENTAGE': '1.24%', 'GTT Used': '25.38mb,', 'GTT Total': '2046.77mb', 'GTT': '25.38mb, / 2046.77mb percentage : 1.24%', 'Memory Clock PERCENTAGE': 'inf%', 'Memory Clock Used': 'Not found', 'Memory Clock PERCENT': 'Not found', 'Memory Clock Total': 'Not found', 'Memory Clock': 'Not found', 'Shader Clock PERCENTAGE': '40.06%', 'Shader Clock Used': '0.313ghz', 'Shader Clock Total': '0.78ghz', 'Shader Clock': '0.313ghz / 0.78ghz percentage : 40.06%'}
      .....
      ```
-  - ##### out_range()
+   - ##### out_range()
      Using the ```out_range``` it only give for that range
      
      ```python
      import RadeonMaster
      gpu = RadeonMaster.GPU()
-     for data in gpu.continuos('0100',out_range=2):
+     for data in gpu.continuos_output('0100',out_range=2):
        print(data)
      ```
      **output**:
